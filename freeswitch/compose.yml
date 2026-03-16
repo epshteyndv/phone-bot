@@ -1,6 +1,6 @@
 services:
   freeswitch:
-    image: signalwire/freeswitch
+    image: safarov/freeswitch
     container_name: freeswitch
     network_mode: host
     volumes:
