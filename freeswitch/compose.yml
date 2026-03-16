@@ -1,0 +1,8 @@
+services:
+  freeswitch:
+    image: signalwire/freeswitch
+    container_name: freeswitch
+    network_mode: host
+    volumes:
+      - ./conf:/etc/freeswitch
+    restart: unless-stopped
