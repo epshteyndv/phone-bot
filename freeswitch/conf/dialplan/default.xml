@@ -1,0 +1,27 @@
+<include>
+  <context name="default">
+
+    <extension name="call_user_1000">
+      <condition field="destination_number" expression="^1000$">
+        <action application="answer"/>
+        <action application="bridge" data="user/1000"/>
+      </condition>
+    </extension>
+
+    <extension name="call_user_1001">
+      <condition field="destination_number" expression="^1001$">
+        <action application="answer"/>
+        <action application="bridge" data="user/1001"/>
+      </condition>
+    </extension>
+
+    <extension name="echo-test">
+      <condition field="destination_number" expression="^.*$">
+        <action application="answer"/>
+        <action application="playback" data="tone_stream://%(1000,2000,440)"/>
+        <action application="echo"/>
+      </condition>
+    </extension>
+
+  </context>
+</include>
