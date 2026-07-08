@@ -8,6 +8,8 @@
       <settings>
         <!-- At this length in bytes rotate the log file (0 for never) -->
         <param name="rollover" value="10485760"/>
+        <!-- Keep only 100 files -->
+        <param name="maximum-rotate" value="100"/>
       </settings>
 
       <mappings>
